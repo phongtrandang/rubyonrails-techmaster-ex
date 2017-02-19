@@ -1,7 +1,23 @@
-<% @products.each do |product| %>
-      <div style="margin-top: 50px">
-          <strong>Name:</strong> <%= product.name %>
-          <br>
-          <strong>Price:</strong> <%= product.price %>
-      </div>
-  <% end %>
+<div class="container">
+	<div class="row">
+		<div class="col-md-10 col-md-offset-1">
+			<h1>List products</h1>
+			<table class="table table-striped">
+				<thead>
+					<tr>
+						<th>Name</th>
+						<th>Price</th>
+					</tr>
+					<tbody>
+					<% @products.each do |product| %>
+						<tr>
+							<td><%= product.name %></td>
+							<td><%= product.price %></td>
+						</tr>
+					<% end %>
+					</tbody>
+				</thead>
+			</table>
+		</div>
+	</div>
+</div>
